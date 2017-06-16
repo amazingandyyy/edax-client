@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-constant-condition": true,
+    "[ts] Cannot find name 'process'.": false
+  }
+}

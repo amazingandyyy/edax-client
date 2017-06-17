@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { initStore } from '../redux/store.js';
+import { store } from '../redux/store.js';
 import withRedux from 'next-redux-wrapper';
 import Layout from '../components/Layout';
 
@@ -9,4 +9,4 @@ class App extends Component {
   }
 }
 
-export default withRedux(initStore, null, null)(App);
+export default withRedux(store)(App);

@@ -5,5 +5,7 @@
         "yarn.lock": true,
         "package-lock.json": true,
         ".travis.yml": true
-    }
+    },
+    "files.autoSave": "onWindowChange",
+    "editor.tabSize": 2
 }

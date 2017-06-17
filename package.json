@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "concurrently 'babel-node ./server/server.js' 'next' ",
     "precommit": "lint-staged",
+    "server": "babel-node ./server/server.js",
     "test": "lint-staged && eslint ."
   },
   "author": {
@@ -30,7 +31,8 @@
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^7.0.31",

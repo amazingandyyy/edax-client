@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeName } from '../redux/store';
-import { bindActionCreators } from 'redux';
+import * as actions from '../redux/actions';
 
 class Layout extends Component {
   componentDidMount() {
-    console.log();
+    this.props.getMessages();
+  }
+  renderCurrentPrice(){
+    if(this.props.matches){
+      return this.props.matches.map((order, id)=>{
+        return <div key={id}>{order.price}</div>
+      })
+    }
   }
   render() {
-    return (
-      <div onClick={() => this.props.changeName('new Andy')}>
-        {this.props.auther}
+    return (<div>
+      <div className="price">
       </div>
-    );
+    </div>);
   }
 }
 
-function mapStateToProps({ auther }) {
+function mapStateToProps({gdax}) {
+  const {matches} = gdax;
   return {
-    auther
+    matches
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    changeName: bindActionCreators(changeName, dispatch)
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default connect(mapStateToProps, actions)(Layout);

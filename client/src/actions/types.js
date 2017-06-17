@@ -1,4 +1,7 @@
-export const AUTH_USER = 'auth_user';
-export const UNAUTH_USER = 'unauth_user';
-export const AUTH_ERROR = 'auth_error';
-export const TRY_CONNECT = 'try_connect';
+export default {
+  AUTH_USER : 'AUTH_USER',
+  UNAUTH_USER : 'UNAUTH_USER',
+  AUTH_ERROR : 'AUTH_ERROR',
+  TRY_CONNECT : 'TRY_CONNECT',
+  FETCH_DGAX: 'FETCH_DGAX'
+}

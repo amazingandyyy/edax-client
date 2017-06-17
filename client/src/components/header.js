@@ -29,25 +29,26 @@ class Header extends Component {
             <nav
                 className="navbar navbar-fixed-top navbar-full navbar-dark bg-primary bg-faded">
                 <Link className="navbar-brand" to="/">MERN</Link>
-                <span  className="float-left">
-                    <ul className="nav navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/public">Public</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/secret">Secret</Link>
-                        </li>
-                    </ul>
-                </span>
-                <span className="float-right">
-                    <ul className="nav navbar-nav">
-                        {this.renderSignButton()}
-                    </ul>
-                </span>
             </nav>
         )
     }
 }
+
+// <span  className="float-left">
+//     <ul className="nav navbar-nav">
+//         <li className="nav-item">
+//             <Link className="nav-link" to="/public">Public</Link>
+//         </li>
+//         <li className="nav-item">
+//             <Link className="nav-link" to="/secret">Secret</Link>
+//         </li>
+//     </ul>
+// </span>
+// <span className="float-right">
+//     <ul className="nav navbar-nav">
+//         {this.renderSignButton()}
+//     </ul>
+// </span>
 
 function mapStateToProps({auth}){
     return {

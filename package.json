@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "",
   "scripts": {
-    "dev": "concurrently 'babel-node ./server/server.js' 'next' ",
+    "dev": "babel-node ./server/server.js",
     "precommit": "lint-staged",
     "server": "babel-node ./server/server.js",
     "test": "lint-staged && eslint ."

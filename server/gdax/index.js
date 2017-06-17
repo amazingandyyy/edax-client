@@ -19,7 +19,8 @@ function registerSocket(socket) {
     if (!err) return socket.emit('account', data);
   });
   websocket.on('message', function(data) {
-    socket.emit('websocket', { data });
+    // socket.emit('websocket', { data });
+    console.log('data', data.data);
   });
 }
 

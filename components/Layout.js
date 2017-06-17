@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeName } from '../store';
+import { changeName } from '../redux/store';
 import { bindActionCreators } from 'redux';
 
-class Page extends Component {
+class Layout extends Component {
   componentDidMount() {
     console.log();
   }
-  // cclick(){
-  //   console.log('eee')
-  //   //
-  // }
   render() {
     return (
       <div onClick={() => this.props.changeName('new Andy')}>
@@ -32,4 +28,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

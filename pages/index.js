@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { initStore } from '../store.js';
+import { initStore } from '../redux/store.js';
 import withRedux from 'next-redux-wrapper';
-import Page from '../components/Page';
+import Layout from '../components/Layout';
 
 class App extends Component {
   render() {
-    return <Page />;
+    return <Layout />;
   }
 }
 

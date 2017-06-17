@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "",
   "scripts": {
-    "dev": "babel-watch ./server/server.js",
+    "dev": "babel-node ./server/server.js",
     "precommit": "lint-staged",
     "test": "lint-staged && eslint ."
   },
@@ -23,13 +23,19 @@
     "fs": "^0.0.1-security",
     "gdax": "^0.4.2",
     "next": "^2.4.4",
+    "next-redux-wrapper": "^1.1.2",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^7.0.31",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -73,7 +79,8 @@
     "rules": {
       "react/react-in-jsx-scope": 0,
       "no-console": 0,
-      "react/display-name": 0
+      "react/display-name": 0,
+      "react/prop-types": 0
     },
     "globals": {
       "React": true

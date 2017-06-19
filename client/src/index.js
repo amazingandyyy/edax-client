@@ -4,9 +4,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import reduxThunk from 'redux-thunk';
+// import '../style/bootstrap.scss';
+import '../style/style.scss';
 
 import App from './components/app';
-import Home from './components/home';
+import Dashboard from './components/dashboard';
 import Public from './components/public';
 import Secret from './components/secret';
 import Signin from './components/auth/signin';
@@ -28,14 +30,16 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component= {App}>
-        <IndexRoute component= {Home} />
-        <Route path="/public" component= {Public} />
-        <Route path="/secret" component= {RequireAuth(Secret)} />
-
-        <Route path="/signin" component= {Signin} />
-        <Route path="/signup" component= {Signup} />
-        <Route path="/signout" component= {Signout} />
+        <IndexRoute component= {Dashboard} />
       </Route>
     </Router>
   </Provider>
   , document.querySelector('#root'));
+
+
+// <Route path="/public" component= {Public} />
+// <Route path="/secret" component= {RequireAuth(Secret)} />
+
+// <Route path="/signin" component= {Signin} />
+// <Route path="/signup" component= {Signup} />
+// <Route path="/signout" component= {Signout} />

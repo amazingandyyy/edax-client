@@ -1,0 +1,18 @@
+@import '../style/variable';
+
+.module{
+  .title{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f3d45;
+    height: 43px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0 10px;
+  }
+}

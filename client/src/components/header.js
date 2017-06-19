@@ -27,8 +27,11 @@ class Header extends Component {
     render() {
         return (
             <nav
-                className="navbar navbar-fixed-top navbar-full navbar-dark bg-primary bg-faded">
-                <Link className="navbar-brand" to="/">MERN</Link>
+                className="main_navbar">
+                <Link className="brand" to="/">
+                    <span className="logo">Ξ</span>
+                    EÐAX
+                </Link>
             </nav>
         )
     }

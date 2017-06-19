@@ -19,10 +19,11 @@ function registerSocket(socket) {
     if (!err) return socket.emit('account', data);
   });
   websocket.on('message', function(data) {
-    // socket.emit('websocket', { data });
-    console.log('data', data.data);
+    socket.emit('websocket', data);
+    // console.log('data', data.data);
   });
 }
+console.log('orderbookSync', orderbookSync)
 
 function write(data) {
   fs.writeFile('./snapshot.json', JSON.stringify(data, null, 2), err => {

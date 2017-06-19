@@ -1,0 +1,42 @@
+@mixin keyframes( $keyframes )
+{
+    @-webkit-keyframes $keyframes {
+        @content;
+    }
+    @-moz-keyframes $keyframes {
+        @content;
+    }
+    @-o-keyframes $keyframes {
+        @content;
+    }
+    @keyframes $keyframes {
+        @content;
+    }
+}
+
+@mixin animation( $animationName )
+{
+    @-webkit-animation $animationName {
+        @content;
+    }
+    @-moz-animation $animationName {
+        @content;
+    }
+    @-o-animation $animationName {
+        @content;
+    }
+    @animation $animationName {
+        @content;
+    }
+}
+
+@include keyframes( tradeHistoryFadeIn )
+{
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

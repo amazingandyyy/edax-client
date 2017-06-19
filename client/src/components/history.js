@@ -57,22 +57,13 @@ class History extends Component {
       )
     }
   }
-  renderSizeFraction(n='') {
-    var totalDigit = n.length;
-    var number = Number(n);
-    var missingZeroNum = totalDigit - number.toString().length;
-    var digitNum = '';
-    while (number % 10 === 0) {
-      digitNum += '0';
-      number = number / 10;
-    }
-    for (var i = 0, leadingZero = ''; i < missingZeroNum; i++,leadingZero += '0');
-    console.log('digitNum', digitNum);
+  renderSizeFraction(number){
+    var middle = number.replace(/0+$/g, '');
     return (
       <span>
-        {leadingZero}{number}
+        {middle}
         <span className="opacity">
-          {digitNum}
+          {number.match(/0+$/g) && number.match(/0+$/g)}
         </span>
       </span>
     )
